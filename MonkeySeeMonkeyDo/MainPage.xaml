@@ -29,19 +29,15 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            
-            <ScrollViewer Name="CategoryScroll" Grid.Column="0">
-                <ListView Name="Categories"/>
-            </ScrollViewer>
 
-            <ScrollViewer Name="DetailScroll" Grid.Column="1">
-                <ListView Name="Details">
-                    <ListView.Items>
-                        <TextBlock Text="detail1"/>
-                        <TextBlock Text="detail2"/>
-                    </ListView.Items>
-                </ListView>
-            </ScrollViewer>
+            <ListView Name="Categories" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Grid.Column="0"/>
+
+            <ListView Name="Details" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Grid.Column="1">
+                <ListView.Items>
+                    <TextBlock Text="detail1"/>
+                    <TextBlock Text="detail2"/>
+                </ListView.Items>
+            </ListView>
         </Grid>
         
     </Grid>
