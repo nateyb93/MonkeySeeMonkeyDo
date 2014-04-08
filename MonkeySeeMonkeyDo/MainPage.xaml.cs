@@ -34,5 +34,10 @@ namespace MonkeySeeMonkeyDo
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void Activity_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
