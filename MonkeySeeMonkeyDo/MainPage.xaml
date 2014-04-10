@@ -14,20 +14,20 @@
                 <Setter Property="CharacterSpacing" Value="20"/>
             </Style.Setters>
         </Style>
-        
+
         <Style x:Name="listItem" TargetType="ListViewItem">
             <Style.Setters>
                 <Setter Property="HorizontalAlignment" Value="Stretch"/>
                 <Setter Property="Margin" Value="5"/>
             </Style.Setters>
         </Style>
-        
+
         <Style x:Name="listItemText" TargetType="TextBlock">
             <Style.Setters>
                 <Setter Property="FontFamily" Value="Calibri Light"/>
                 <Setter Property="FontSize" Value="30"/>
                 <Setter Property="Margin" Value="10"/>
-                
+
             </Style.Setters>
         </Style>
     </Page.Resources>
@@ -37,7 +37,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        
+
         <TextBlock Grid.Row="0" Style="{StaticResource headerStyle}" Text="monkey see" FontSize="90" Margin="20,10,0,0" VerticalAlignment="Bottom"/>
         <TextBlock Grid.Row="0" Style="{StaticResource headerStyle}" Text="activity" FontSize="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,10"/>
         <Grid Grid.Row="1">
@@ -48,26 +48,21 @@
             </Grid.ColumnDefinitions>
 
             <ListView Name="Categories" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Grid.Column="0" Background="Black" Margin="10">
-                <ListViewItem Style="{StaticResource listItem}" Tapped="Activity_Tapped">
-                    <TextBlock Style="{StaticResource listItemText}"  Text="Activity"/>
-                </ListViewItem>
 
-                <ListViewItem Style="{StaticResource listItem}">
-                    <TextBlock Style="{StaticResource listItemText}"  Text="Progress"/>
-                </ListViewItem>
+                <TextBlock Style="{StaticResource listItemText}"  Text="Activity"/>
 
-                <ListViewItem Style="{StaticResource listItem}">
-                    <TextBlock Style="{StaticResource listItemText}"  Text="Data"/>
-                </ListViewItem>
+                <TextBlock Style="{StaticResource listItemText}"  Text="Progress"/>
 
-                <ListViewItem Style="{StaticResource listItem}">
-                    <TextBlock Style="{StaticResource listItemText}"  Text="Details"/>
-                </ListViewItem>
+                <TextBlock Style="{StaticResource listItemText}"  Text="Data"/>
+
+
+                <TextBlock Style="{StaticResource listItemText}"  Text="Details"/>
+
             </ListView>
 
             <ListView Name="Details" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Grid.Column="1" Background="Black" Margin="10">
             </ListView>
         </Grid>
-        
+
     </Grid>
 </Page>
